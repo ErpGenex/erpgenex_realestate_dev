@@ -12,6 +12,8 @@
 		"tower",
 		"floor",
 		"unit_number",
+		"owner_customer",
+		"intended_operating_scenario",
 		"status",
 		"section_measurement",
 		"measurement_standard",
@@ -61,6 +63,19 @@
 			"in_list_view": 1,
 			"label": "Unit Number",
 			"reqd": 1
+		},
+		{
+			"description": "Beneficial owner when unit is sold or handed over for third-party management (RICS).",
+			"fieldname": "owner_customer",
+			"fieldtype": "Link",
+			"label": "Owner (Customer)",
+			"options": "Customer"
+		},
+		{
+			"fieldname": "intended_operating_scenario",
+			"fieldtype": "Select",
+			"label": "Intended Operating Scenario",
+			"options": "owner_full_management\nowner_leasing_agency\nmaster_lease_operator\ncompany_owned_rental\ndevelop_sell_handover_rent"
 		},
 		{
 			"default": "Available",
