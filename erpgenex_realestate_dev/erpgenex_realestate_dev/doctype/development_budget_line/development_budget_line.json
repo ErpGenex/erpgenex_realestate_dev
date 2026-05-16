@@ -1,0 +1,61 @@
+{
+	"actions": [],
+	"autoname": "hash",
+	"creation": "2026-05-17 12:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"cost_code",
+		"description",
+		"budget_amount",
+		"actual_amount",
+		"notes"
+	],
+	"fields": [
+		{
+			"fieldname": "cost_code",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Cost Code",
+			"reqd": 1
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Small Text",
+			"in_list_view": 1,
+			"label": "Description"
+		},
+		{
+			"fieldname": "budget_amount",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "Budget Amount",
+			"reqd": 1
+		},
+		{
+			"default": "0",
+			"fieldname": "actual_amount",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "Actual / Earned Value"
+		},
+		{
+			"fieldname": "notes",
+			"fieldtype": "Small Text",
+			"label": "Notes"
+		}
+	],
+	"grid_page_length": 50,
+	"istable": 1,
+	"links": [],
+	"modified": "2026-05-17 12:00:00.000000",
+	"module": "Erpgenex Realestate Dev",
+	"name": "Development Budget Line",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 0
+}

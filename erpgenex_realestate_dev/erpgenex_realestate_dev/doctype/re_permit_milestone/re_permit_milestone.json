@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-16 18:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "company",
+  "development_project",
+  "milestone_name",
+  "permit_authority",
+  "due_date",
+  "completed_date",
+  "status",
+  "notes"
+ ],
+ "fields": [
+  {"default": "RPM-.####", "fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "RPM-.####", "reqd": 1},
+  {"fieldname": "company", "fieldtype": "Link", "in_list_view": 1, "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "development_project", "fieldtype": "Link", "in_list_view": 1, "label": "Development Project", "options": "Development Project", "reqd": 1},
+  {"fieldname": "milestone_name", "fieldtype": "Data", "in_list_view": 1, "label": "Milestone / Permit", "reqd": 1},
+  {"fieldname": "permit_authority", "fieldtype": "Data", "label": "Authority"},
+  {"fieldname": "due_date", "fieldtype": "Date", "in_list_view": 1, "label": "Due Date"},
+  {"fieldname": "completed_date", "fieldtype": "Date", "label": "Completed Date"},
+  {"default": "Pending", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Pending\nSubmitted\nApproved\nOverdue\nCancelled", "reqd": 1},
+  {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"}
+ ],
+ "module": "Erpgenex Realestate Dev",
+ "name": "RE Permit Milestone",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "read": 1, "role": "System Manager", "write": 1},
+  {"create": 1, "read": 1, "role": "Desk User", "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

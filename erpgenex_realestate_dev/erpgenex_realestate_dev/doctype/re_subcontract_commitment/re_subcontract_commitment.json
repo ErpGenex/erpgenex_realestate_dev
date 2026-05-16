@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-16 18:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "company",
+  "development_project",
+  "supplier",
+  "commitment_date",
+  "committed_amount",
+  "invoiced_amount",
+  "status",
+  "description"
+ ],
+ "fields": [
+  {"default": "RSC-.####", "fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "RSC-.####", "reqd": 1},
+  {"fieldname": "company", "fieldtype": "Link", "in_list_view": 1, "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "development_project", "fieldtype": "Link", "in_list_view": 1, "label": "Development Project", "options": "Development Project", "reqd": 1},
+  {"fieldname": "supplier", "fieldtype": "Link", "label": "Subcontractor", "options": "Supplier", "reqd": 1},
+  {"fieldname": "commitment_date", "fieldtype": "Date", "in_list_view": 1, "label": "Commitment Date"},
+  {"fieldname": "committed_amount", "fieldtype": "Currency", "in_list_view": 1, "label": "Committed Amount", "reqd": 1},
+  {"default": "0", "fieldname": "invoiced_amount", "fieldtype": "Currency", "label": "Invoiced to Date"},
+  {"default": "Open", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Open\nPartially Invoiced\nClosed\nCancelled", "reqd": 1},
+  {"fieldname": "description", "fieldtype": "Small Text", "label": "Description"}
+ ],
+ "module": "Erpgenex Realestate Dev",
+ "name": "RE Subcontract Commitment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "read": 1, "role": "System Manager", "write": 1},
+  {"create": 1, "read": 1, "role": "Desk User", "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

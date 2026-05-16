@@ -1,0 +1,120 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "naming_series:",
+	"creation": "2026-05-17 12:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"company",
+		"development_project",
+		"reference_boq",
+		"budget_version",
+		"status",
+		"total_budget",
+		"budget_lines",
+		"notes"
+	],
+	"fields": [
+		{
+			"default": "DB-.####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Series",
+			"options": "DB-.####",
+			"reqd": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "development_project",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Development Project",
+			"options": "Development Project",
+			"reqd": 1
+		},
+		{
+			"fieldname": "reference_boq",
+			"fieldtype": "Link",
+			"label": "Reference BOQ",
+			"options": "RE BOQ"
+		},
+		{
+			"default": "1.0",
+			"fieldname": "budget_version",
+			"fieldtype": "Data",
+			"label": "Version"
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Draft\nApproved\nSuperseded",
+			"reqd": 1
+		},
+		{
+			"fieldname": "total_budget",
+			"fieldtype": "Currency",
+			"label": "Total Budget",
+			"read_only": 1
+		},
+		{
+			"fieldname": "budget_lines",
+			"fieldtype": "Table",
+			"label": "Lines",
+			"options": "Development Budget Line"
+		},
+		{
+			"fieldname": "notes",
+			"fieldtype": "Small Text",
+			"label": "Notes"
+		}
+	],
+	"grid_page_length": 50,
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-05-17 12:00:00.000000",
+	"module": "Erpgenex Realestate Dev",
+	"name": "Development Budget",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Desk User",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}
